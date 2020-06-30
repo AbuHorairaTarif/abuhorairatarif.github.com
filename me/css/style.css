@@ -1,0 +1,195 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+nav {
+    background-color: transparent;
+    /* background-color: lavender; */
+    background-color: #fff;
+    font-size: 1.8rem;
+    /* border: 1px solid; */
+    /* position: relative; */
+    width: 100vw;
+
+}
+
+.navbar a {
+    /* color: gray; */
+    color: #555;
+    color: lightseagreen;
+    font-weight: 700;
+
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    /* color: black; */
+    /* border: 1px solid; */
+    /* position: relative; */
+    /* padding-right: 60px; */
+}
+
+.navbar ul {
+    /* margin-left: 60px; */
+    /* position: absolute; */
+    /* width: 80vw; */
+    /* border: 1px solid red; */
+    /* padding-right: 50px; */
+    /* float: center; */
+    /* font-size: 1.6rem; */
+    /* text-align: center; */
+
+}
+
+.navbar ul li{
+    
+    /* background-color: lavender;     */
+}
+.navbar ul li a{
+    text-align: center;
+    font-size: 1.8rem;
+}
+.navbar ul li a:hover{
+    color: rgb(7, 207, 107);
+}
+.navbar ul li div a:hover{
+    /* background: red; */
+    color: rgb(7, 207, 107);
+}
+
+.background {
+    background-image: linear-gradient(to right, hsla(195, 90%, 27%, 0.856), hsla(0, 0%, 100%, 0.849)), url("/images/work-5.jpg");
+    
+    background-image: cover;
+    background-position: top;
+    /* background: linear-gradient(purple,red); */
+    height: 85vh;
+    clip-path: circle(72.3% at 40% 34%);
+    margin-bottom: 5rem;
+}
+
+
+.background-text {
+    position: absolute;
+    top: 30%;
+    left: 33%;
+    translate: (-50%,-50%);
+    
+}
+.background-title {
+    color: #fff;
+    text-transform: capitalize;
+    
+}
+.background-title-main {
+    display: block;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+.background-title-sub {
+    display: block;
+    font-size: 2.44rem;
+    /* margin-left: 1.7rem; */
+
+}
+.background-title-sub-2 {
+    display: block;
+    font-size: 2.44rem;
+    color: gold;
+    font-weight: 700;
+    /* margin-left: 1.7rem; */
+    margin-bottom: 3rem;
+
+}
+
+.social-link {
+    text-align: center;
+    font-size: 1.8rem;
+    /* border: 1px solid #fff; */
+    
+}
+
+.social-link a {
+    margin: 1.5rem;
+    color: #fff;
+    
+}
+
+.fa-twitter {
+    border: 1px solid #fff;
+    border-radius: 100%;
+    padding: 5px 5px;
+    
+}
+.fa-twitter:hover {
+    /* border: 1px solid #fff; */
+    /* border-radius: 100%; */
+    padding: 7px 7px;
+    background-color: #1DA1F2;
+    
+}
+.fa-github {
+    border: 1px solid #fff;
+    border-radius: 100%;
+    padding: 5px 5px;
+    
+}
+.fa-github:hover {
+    padding: 7px 7px;
+    background-color: #282828;
+}
+.fa-linkedin {
+    border: 1px solid #fff;
+    border-radius: 100%;
+    padding: 5px 5px;
+    
+}
+.fa-linkedin:hover {
+    padding: 7px 7px;
+    background-color: #006699;
+    
+}
+
+.about h1 {
+    font-size: 6rem;
+}
+.about h2 {
+    font-size: 3.5rem;
+}
+.short-description {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #555;
+}
+
+.skills {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/* @media(max-width:768px)
+{
+    
+   
+}
+@media(max-width:480px)
+{
+    body {
+        font-size: 1.5rem;
+        
+    }
+    
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+} */
