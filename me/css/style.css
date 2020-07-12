@@ -64,7 +64,7 @@ nav {
 }
 
 .background {
-    background-image: linear-gradient(to right, hsla(195, 90%, 27%, 0.856), hsla(0, 0%, 100%, 0.849)), url("/images/work-5.jpg");
+    background: linear-gradient(to right, hsla(195, 90%, 27%, 0.856), hsla(0, 0%, 100%, 0.849)), url("../images/work-5.jpg");
     
     background-image: cover;
     background-position: top;
@@ -72,14 +72,16 @@ nav {
     height: 85vh;
     clip-path: circle(72.3% at 40% 34%);
     margin-bottom: 5rem;
+    text-align: center;
 }
 
 
 .background-text {
     position: absolute;
-    top: 30%;
-    left: 33%;
-    translate: (-50%,-50%);
+    width: 280px;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%,-50%);
     
 }
 .background-title {
