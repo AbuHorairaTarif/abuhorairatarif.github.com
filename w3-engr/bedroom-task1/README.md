@@ -6,6 +6,7 @@
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
 - [Version](#Version)
+- [Screenshots](#screenshots)
 - [Features](#features)
 
 
@@ -22,6 +23,7 @@ The project is made for the purpose of testing my knowledge in Pure HTML & CSS.I
 </ul>
 
 ## Getting-Started
+<hr/>
 <h2>System Requirement</h2>
 <ul>Ram more than <strong>2GB</strong> is recommended</ul>
 <ul>Operating System: Any Type</ul>
@@ -34,9 +36,11 @@ The project is made for the purpose of testing my knowledge in Pure HTML & CSS.I
 ## Live Link
 Hosted in GitHub -> [BedroomVillas-task01](https://abuhorairatarif.github.io/w3-engr/bedroom-task1/)
 
+## Screenshots
+
 Mobile Version ->
 ![Bedroom Villas Mobile View](https://abuhorairatarif.github.io/w3-engr/bedroom-task1/screenshot/mobile-view.png)
-
+<hr/>
 Desktop Version ->
 
 ![Bedroom Villas Desktop View](https://abuhorairatarif.github.io/w3-engr/bedroom-task1/screenshot/desktop-view.png)
