@@ -41,11 +41,11 @@ Hosted in GitHub -> [Vanilla-task02](https://abuhorairatarif.github.io/w3-engr/t
 ## Screenshots
 
 Mobile Version ->
-![Vanilla Javascript Mobile View]()
+![Vanilla Javascript Mobile View](https://abuhorairatarif.github.io/w3-engr/task2/Assignment2/screenshot/screenshot1.png)
 <hr/>
 Desktop Version ->
 
-![Vanilla Desktop View]()
+![Vanilla Desktop View](https://abuhorairatarif.github.io/w3-engr/task2/Assignment2/screenshot/screenshot2.png)
 
 
 ## Features
