@@ -15,7 +15,7 @@
 <body>
     <div class="container m-3">
         
-        <form>
+        <form id="formContainer">
             <div class="row ">
                     <div class="col-xl-3">
                         <div class="input-group">
@@ -109,7 +109,7 @@
           <!-- <div id="result">
           </div> -->
 
-          <div class="container">
+          <div class="container result-text " id="resultTextContainer">
           <div class="search-result" id="locationResult"></div>
           <div class="search-result" id="checkInResult"></div>
           <div class="search-result" id="checkOutResult"></div>
@@ -119,11 +119,8 @@
           </div>
           <button type="button" class="btn btn-sm btn-warning" id="mapButton" style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);">Show Map</button>
 
-    <div class="map-container" id="map" style="width: 90%; height: 400px; display: none;">
-    <!-- <div id="map">
-
-    </div> -->
-    </div>
+          <div class="map-container" id="map" style="position: fixed; top: 0; right: 0; bottom: 0; left: 0;">
+          </div>
             
           </div>
     </div>

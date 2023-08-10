@@ -1,3 +1,4 @@
+// ================================Suggestions Input ==================================
 const input = document.getElementById('location');
 const suggestionsContainer = document.getElementById('suggestions');
 let locations = []; // This will hold the location data from the JSON file
@@ -42,15 +43,7 @@ suggestionsContainer.addEventListener('click', event => {
 });
 
 
-
-// Change input text to date format onclick event
-
-// const inputField = document.getElementById('inputField');
-
-// inputField.addEventListener('focus', () => {
-//   inputField.type = 'date';
-// });
-
+// ================================== CheckIn and Checkout Button Modification==========================
 
 const inputField = document.getElementById('inputField');
 const inputFieldCheckout = document.getElementById('inputFieldCheckout');
@@ -86,61 +79,7 @@ function displayResult() {
 
 
 
-
-// const inputField = document.getElementById('inputField');
-// const resultDiv = document.getElementById('result');
-// let enteredValue = ''; // To store the entered value
-
-// inputField.addEventListener('focus', () => {
-//   inputField.type = 'date';
-// });
-
-// inputField.addEventListener('blur', () => {
-//   enteredValue = inputField.value;
-//   inputField.type = 'text';
-//   displayResult();
-// });
-
-// function displayResult() {
-//   resultDiv.textContent = `Check In: ${enteredValue}`;
-// }
-
-// const inputFieldCheckout = document.getElementById('inputFieldCheckout');
-// const resultDivCheckout = document.getElementById('resultCheckout');
-// enteredValue = ''; // To store the entered value
-
-// inputField.addEventListener('focus', () => {
-//   inputField.type = 'date';
-// });
-
-// inputField.addEventListener('blur', () => {
-//   enteredValue = inputField.value;
-//   inputField.type = 'text';
-//   displayResult();
-// });
-
-// function displayResult() {
-//   resultDivCheckout.textContent = `Check Out: ${enteredValue}`;
-// }
-
-
-
-
-
-
-
-
-
-// var slider = document.getElementById("priceRange");
-// var output = document.getElementById("valuePriceRange");
-// output.innerHTML = slider.value;
-
-// slider.oninput = function() {
-//   output.innerHTML = this.value;
-// }
-
-
-// Slider Functionality
+// =================Guest Slider Functionality======================
 
 var slider = document.getElementById("guestRange");
 var output = document.getElementById("valueGuestRange");
@@ -198,50 +137,7 @@ sliderPrice.oninput = function() {
     valueGuestRange.textContent = guestRange.value;
   }
 
-
-
-
-// const priceInput = document.getElementById('priceInput');
-// const priceToast = document.getElementById('priceToast');
-// const priceRange = document.getElementById('priceRange');
-// const valuePriceRange = document.getElementById('valuePriceRange');
-// const decrementPriceBtn = document.getElementById('decrementPrice');
-// const incrementPriceBtn = document.getElementById('incrementPrice');
-// const priceSubmit = document.getElementById('priceSubmit');
-
-// priceInput.addEventListener('click', () => {
-//   priceToast.style.display = 'block';
-// });
-
-// priceRange.addEventListener('input', () => {
-//   updatePriceValue();
-// });
-
-// decrementPriceBtn.addEventListener('click', () => {
-//   if (priceRange.value > priceRange.min) {
-//     priceRange.value = parseInt(priceRange.value) - 1;
-//     updatePriceValue();
-//   }
-// });
-
-// incrementPriceBtn.addEventListener('click', () => {
-//   if (priceRange.value < priceRange.max) {
-//     priceRange.value = parseInt(priceRange.value) + 1;
-//     updatePriceValue();
-//   }
-// });
-
-// priceSubmit.addEventListener('click', () => {
-//   const selectedPrice = priceRange.value;
-//   priceInput.value = `$${selectedPrice}`;
-//   priceToast.style.display = 'none';
-// });
-
-// function updatePriceValue() {
-//   valuePriceRange.textContent = priceRange.value;
-// }
-
-
+// ====================================  price Range  =========================================================
 
 const priceInput = document.getElementById('priceInput');
 const priceToast = document.getElementById('priceToast');
@@ -284,7 +180,6 @@ function initializePriceRangeSlider() {
 }
 
 
-
 priceInput.addEventListener('click', () => {
   priceToast.style.display = 'block';
   priceRange.style.display = 'block'; // Show the price range slider
@@ -295,9 +190,6 @@ priceInput.addEventListener('click', () => {
     tooltips[i].style.display = 'block';
   }
 });
-
-
-
 
 
 // Show Result when clicked in Search Button into div
@@ -345,81 +237,101 @@ inputFieldCheckout.addEventListener('blur', () => {
 
 
 
+// ================================     Map Initialization Using Leaflet    =====================================================================
 
 
-
-// Wait for the DOM to be ready
 document.addEventListener('DOMContentLoaded', function () {
-  // Get the button and map container elements
-  var searchButton = document.getElementById('mapButton');
-  var mapContainer = document.getElementById('map');
   
-  // Create a map instance and set the initial view
-  var map = L.map('map').setView([51.505, -0.09], 13);
-  
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
-  
-  // Event listener for the button click
-  searchButton.addEventListener('click', function () {
-      // Toggle the display of the map container
-      if (mapContainer.style.display === 'none') {
-          mapContainer.style.display = 'block';
-          // If the map is not already initialized, set the map view
-          if (!map.hasLayer(L.tileLayer)) {
-              map.setView([51.505, -0.09], 13);
-          }
-      } else {
-          mapContainer.style.display = 'none';
-      }
-  });
-});
+  const mapButton = document.getElementById('mapButton');
+  const mapContainer = document.getElementById('map');
+  const formContainer = document.getElementById('formContainer'); // Adjust the selector based on your HTML structure
+  const resultTextContainer = document.getElementById('resultTextContainer'); // Adjust the selector based on your HTML structure
 
-let map;
-let hotelsData; // To store the loaded JSON data
+  let isMapVisible = false;
+  let hotels = [];
 
-function initMap() {
-    map = L.map('map').setView([34.0522, -118.2437], 5); // Set initial map view
+  mapButton.addEventListener('click', () => {
+    if (!isMapVisible) {
+      mapContainer.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+      mapButton.innerText = 'Hide Map';
+      mapButton.style.color = 'white';
+      mapButton.style.background = 'black'
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-    }).addTo(map);
-}
+      isMapVisible = true;
+      initializeMap();
 
-async function loadHotelsData() {
-    try {
-        const response = await fetch('hotelPrice.json'); // Adjust the path as needed
-        if (!response.ok) {
-            throw new Error('Failed to load hotel data.');
-        }
-        hotelsData = await response.json();
-    } catch (error) {
-        console.error('Error loading hotel data:', error);
+      // Hide the form and result-text containers
+      formContainer.style.display = 'none';
+      resultTextContainer.style.display = 'none';
+    } else {
+      mapContainer.style.display = 'none';
+      document.body.style.overflow = 'auto';
+      mapButton.innerText = 'Show Map';
+      isMapVisible = false;
+
+      // Show the form and result-text containers
+      formContainer.style.display = 'block';
+      resultTextContainer.style.display = 'block';
     }
-}
+  });
 
-function searchHotels() {
-    const priceRange = parseInt(document.getElementById('priceRange').value);
+  
+  async function initializeMap() {
+    const response = await fetch('hotelPrice.json');
+    hotels = await response.json();
+    const locationResponse = await fetch('location.json');
+    const locations = await locationResponse.json();
+  
+    const map = L.map('map').setView([40, -100], 4);
+  
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+  
+    locations.forEach(location => {
+      const nearestHotel = findNearestHotel(location.latitude, location.longitude);
+      if (nearestHotel && isPriceInRange(nearestHotel.price)) {
+        const marker = L.marker([location.latitude, location.longitude]).addTo(map);
+        marker.bindPopup(`<b>${nearestHotel.name}</b><br>Price: $${nearestHotel.price}`).openPopup();
+      }
+    });
+  }
+  
+  function isPriceInRange(price) {
+    return price >= selectedPriceRange[0] && price <= selectedPriceRange[1];
+  }
 
-    // Clear existing markers
-    map.eachLayer(layer => {
-        if (layer instanceof L.Marker) {
-            map.removeLayer(layer);
-        }
+  function findNearestHotel(latitude, longitude) {
+    let nearestHotel = null;
+    let minDistance = Number.MAX_VALUE;
+
+    hotels.forEach(hotel => {
+      const distance = calculateDistance(latitude, longitude, hotel.latitude, hotel.longitude);
+      if (distance < minDistance) {
+        minDistance = distance;
+        nearestHotel = hotel;
+      }
     });
 
-    // Add markers for matching hotels
-    hotelsData.forEach(hotel => {
-        if (hotel.price <= priceRange) {
-            L.marker([hotel.latitude, hotel.longitude])
-                .bindPopup(`${hotel.name}<br>Price: $${hotel.price}`)
-                .addTo(map);
-        }
-    });
-}
+    return nearestHotel;
+  }
 
-document.addEventListener('DOMContentLoaded', async function () {
-    initMap();
-    await loadHotelsData();
+  function calculateDistance(lat1, lon1, lat2, lon2) {
+    const R = 6371; // Radius of the earth in km
+    const dLat = deg2rad(lat2 - lat1); // deg2rad below
+    const dLon = deg2rad(lon2 - lon1);
+    const a =
+      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    const d = R * c; // Distance in km
+    return d;
+  }
+
+  function deg2rad(deg) {
+    return deg * (Math.PI / 180);
+  }
 });
+
+

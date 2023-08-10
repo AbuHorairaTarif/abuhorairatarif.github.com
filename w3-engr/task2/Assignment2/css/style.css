@@ -1,3 +1,32 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* height: 10vh; */
+}
+
+.result-text {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+#navever {
+  display: block;
+}
+
 #suggestions {
     border: 1px solid #ccc;
     max-height: 150px;
@@ -10,6 +39,7 @@
       margin-top: 10px;
       font-weight: bold;
     }
+
 
     .btn-style {
   background-color: #eff3f2; /* Green */
@@ -44,4 +74,22 @@
 .map-container {
     margin: 10px auto;
     text-align: center;
+}
+
+#map {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1; /* Move the map behind the button */
+}
+
+
+#mapButton.moved {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
 }
