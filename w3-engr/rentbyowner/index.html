@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent By Owner™ Vacation Rentals and Holiday Homes</title>
+    <link rel="icon" href="assets/images/icons/favicon_dark.ico" type="image/x-icon" id="dark-scheme-icon">
+    <link rel="icon" href="assets/images/icons/favicon_light.ico" type="image/x-icon" id="light-scheme-icon">
+    <link rel="stylesheet" href="css/common-property.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+
+<body>
+    <header>
+        <div class="header-content ">
+            <div class="nav-content">
+                <a href="/" class="header-logo responsive-image">
+                    <img src="assets/images/header_logo.svg" id="header-logo-svg" alt="Rent By Owner" width="338"
+                        height="48" />
+                    <span></span>
+                </a>
+                
+                <nav id="navMenu" class="">
+                    <input type="checkbox" id="hamburger-icon-menu" > 
+                    <label for ="hamburger-icon-menu" class="hamburger-icon">
+                        <img src="/assets/images/icons/icons8-hamburger-menu.svg"  >
+                
+                    </label>
+                    <img src="/assets/images/icons/close-rbo.svg" id="close-button" onclick="navHide()"> 
+                    <img src="/assets/images/icons/close_white.svg" id="close-button-white" onclick="navHide2()">
+                
+                    <ul class="nav-ul navbar-item" id="navMenu1">
+                        <li class="nav-item"><a href="#">RENTALS</a>
+                            <div class="triangle"></div>
+                            <div class="nav-item-menu2">
+                                
+                                <div class="nav-item-menu-img">
+                                    <img src="/assets/images/property-type-menu.webp" width="425" height="470">
+                                </div>
+                                <ul>
+                                    <h5>Property Types</h5>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">All RBO HOMES</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Vacation Rentals</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Cabins</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Cottages</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Ski Charlets</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Time Shares</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Unique Vacation Rentals</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Villas</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Hotel with Suits</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Resort Rental</a></li>
+
+                                </ul>
+                                <ul>
+                                    <h5>Special Stays</h5>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Luxury Rentals</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Family Rentals</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Pet Friendly Vacation Rentals</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Vacation Rentals with Pools</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Oceanfront Vacation Rentals</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Beach Home Rentals</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Summer Rentals</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Winter Rentals</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Short-Term Stays</a></li>
+
+                                </ul>
+
+                                <ul>
+                                    <h5>Types of Travels</h5>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Business Travel</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Group Travel</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Sustainable Travels</a></li>
+                                    
+
+                                </ul>
+                            </div>
+                            <img src="/assets/images/icons/caret-down-white.svg" height="13" width="13" class="caret-on-nav">
+                        </li>
+                        
+                        <li class="nav-item"><a href="#">NEARBY</a>
+                            <div class="triangle"></div>
+                            <div class="nav-item-menu2" id="allnearme">
+                               <ul>
+                                    
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">All Near Me</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Less than 2 hours</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Less than 4 hours</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Less than 6 hours</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Less than 8 hours</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Staycations</a></li>
+
+                                </ul>
+                                
+                            </div>
+                            <img src="/assets/images/icons/caret-down-white.svg" height="13" width="13" class="caret-on-nav">
+                        </li>
+                        
+                        <li class="nav-item"><a href="#">DESTINATIONS</a>
+                            <div class="triangle"></div>
+                            <div class="nav-item-menu2" id="destinations">
+                               <ul>
+                                    
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Galveston</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Sedona</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Honolulu</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Palm Springs</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Tybee Island</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Hilton Head</a></li>
+
+                                <!-- </ul>
+                                <ul> -->
+                                    
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Big Bear</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Gatlinburg</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Destin</a></li>
+                                    <li class="dropdown-item"><a href="" class="nav-link-sub">Whistler</a></li>
+                                    
+
+                                </ul>
+
+                                <div class="destination-right">
+                                    <img src="/assets/images/destination_rbo.webp" width="57" height="57">
+
+                                    <div class="head-text-destination">
+                                        <h5>Discover New Destinations & Things to Do
+                                        </h5>
+                                        <p>Read the latest entries in our global travel journal</p>
+                                    </div>
+                                    
+                                    <div class="dest-low-text">
+                                        <h5>Looking for a place to rent?</h5>
+                                    
+                                   <p>Find a vacation rental on Rent By Owner</p> 
+                                   <div>
+                                    <button type="button" class="button search-button-nav bg-color-green text-white">Search </button>
+                                   </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                            <img src="/assets/images/icons/caret-down-white.svg" height="13" width="13" class="caret-on-nav">
+                        </li>
+                        
+                        <li class="nav-item"><a href="#">FOR OWNERS</a>
+                            <div class="triangle"></div>
+                            <div class="nav-item-menu2" id="forOwners">
+                            <ul>        
+                                <li class="dropdown-item"><a href="" class="nav-link-sub">Resources</a></li>
+                                <li class="dropdown-item"><a href="" class="nav-link-sub">Virtual Property Manager</a></li>
+                                <li class="dropdown-item"><a href="" class="nav-link-sub">Add a Listing</a></li>
+                            </ul>
+                            </div>
+                            <img src="/assets/images/icons/caret-down-white.svg" height="13" width="13" class="caret-on-nav">
+                        </li>
+                        <li class="nav-right"><a href="#" class="search"><img src="assets/images/icons/search-svgrepo-com.svg"></a></li>
+                        <li class="nav-right">|</li>
+                        <li class="nav-right"><a href="#"><img src="assets/images/icons/icons8-user-32.png"></a></li>
+                    </ul>
+
+                    
+                    
+                </nav>
+
+
+            </div>
+            <div class="header-content-2">
+                <div class="header-img banner-content home-banner home-banner-bg">
+                    <img class="banner-image" loading="lazy" src="assets/images/coverphoto.webp">
+                    <div class="overlay"></div>
+                    <div class="header-search-box img-overlays">
+
+                        <h3 class="header-search-text">FIND VACATION RENTALS, CABINS, COTTAGES, AND MORE.</h3>
+                        <div class="header-banner-form">
+                            <form action="" method="">
+                                <div class="header-form">
+                                    <div class="header-form-item location-area">
+                                        <input type="text" name="location" id="location"
+                                            placeholder="Where do you want to go?">
+                                    </div>
+                                    <div class="header-form-item date-area">
+                                        <input type="date" name="location" id="date-range-display">
+                                    </div>
+                                    <div class="header-form-item button-area">
+                                        <button type="submit" id="search-button"
+                                            class="button search-button bg-color-green text-white">Show Best
+                                            Places</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                    <div class="overlay-bottom"></div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </header>
+
+    <section class="top-section">
+        <div class="top-section-box text-center">
+            <h1 class="text-center">THE BEST VACATION RENTALS & RBO HOMES</h1>
+            <img src="/assets/images/underline.svg">
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <h2 class="text-center head-subtitle">12 MOST POPULAR PLACES</h2>
+            </div>
+
+        </div>
+
+
+        <div class=" box-tiles-container">
+            <div class="container-fluid">
+                <div class="box-tiles">
+
+
+                    <div class="card">
+                        <div class="card-img-relative">
+                            <img src="/assets/images/card-img/1.webp" class="img-property">
+                            <div class="card-title-property-count">
+                                <p class="card-title-text">Barcelona</p>
+                                <p class="property-count">10100+ Properties</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img-relative">
+                            <img src="/assets/images/card-img/2.webp" class="img-property">
+                            <div class="card-title-property-count">
+                                <p class="card-title-text">Barcelona</p>
+                                <p class="property-count">10100+ Properties</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img-relative">
+                            <img src="/assets/images/card-img/3.webp" class="img-property">
+                            <div class="card-title-property-count">
+                                <p class="card-title-text">Barcelona</p>
+                                <p class="property-count">10100+ Properties</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img-relative">
+                            <img src="/assets/images/card-img/4.webp" class="img-property">
+                            <div class="card-title-property-count">
+                                <p class="card-title-text">Barcelona</p>
+                                <p class="property-count">10100+ Properties</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img-relative">
+                            <img src="/assets/images/card-img/5.webp" class="img-property">
+                            <div class="card-title-property-count">
+                                <p class="card-title-text">Barcelona</p>
+                                <p class="property-count">10100+ Properties</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img-relative">
+                            <img src="/assets/images/card-img/6.webp" class="img-property">
+                            <div class="card-title-property-count">
+                                <p class="card-title-text">Barcelona</p>
+                                <p class="property-count">10100+ Properties</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img-relative">
+                            <img src="/assets/images/card-img/7.webp" class="img-property">
+                            <div class="card-title-property-count">
+                                <p class="card-title-text">Barcelona</p>
+                                <p class="property-count">10100+ Properties</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img-relative">
+                            <img src="/assets/images/card-img/8.webp" class="img-property">
+                            <div class="card-title-property-count">
+                                <p class="card-title-text">Barcelona</p>
+                                <p class="property-count">10100+ Properties</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img-relative">
+                            <img src="/assets/images/card-img/9.webp" class="img-property">
+                            <div class="card-title-property-count">
+                                <p class="card-title-text">Barcelona</p>
+                                <p class="property-count">10100+ Properties</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img-relative">
+                            <img src="/assets/images/card-img/10.webp" class="img-property">
+                            <div class="card-title-property-count">
+                                <p class="card-title-text">Barcelona</p>
+                                <p class="property-count">10100+ Properties</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img-relative">
+                            <img src="/assets/images/card-img/11.webp" class="img-property">
+                            <div class="card-title-property-count">
+                                <p class="card-title-text">Barcelona</p>
+                                <p class="property-count">10100+ Properties</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img-relative">
+                            <img src="/assets/images/card-img/12.webp" class="img-property">
+                            <div class="card-title-property-count">
+                                <p class="card-title-text">Barcelona</p>
+                                <p class="property-count">10100+ Properties</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="property-content-page">
+            <p>
+                At Rent By Owner Vacation Rentals, we can help you find and compare millions of places to stay from
+                the world’s top destinations. RBO means ‘Rent By Owner’, and whether you want a whole home, cabin,
+                cottage, private villa, resort condo, or even a luxury ski chalet, we can match you with the best in
+                short term accommodation. Need some inspiration for where to go next? With Rent By owner as your
+                local guide, you will always find the most popular trips right at the top, and all of them in one
+                place. Find the best places to stay near you, or travel the world! Get more room and save money with
+                Rent By Owner™.
+            </p>
+
+            <h3 class="text-center">
+                Asia & Oceania
+            </h3>
+
+            <div class="property-list-name">
+                <ul>
+                    <li>
+                        <a href="#">Auckland</a>
+                        <a href="#">Bali</a>
+                        <a href="#">Byron Bay</a>
+                        <a href="#">Canberra</a>
+                        <a href="#">Fiji</a>
+                        <a href="#">Gold Coast</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Koh Samui</a>
+                        <a href="#">Lombok</a>
+                        <a href="#">Melbourne</a>
+                        <a href="#">Perth</a>
+                        <a href="#">Phang Nga</a>
+                        <a href="#">Phuket</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Seoul</a>
+                        <a href="#">Sunshine Coast</a>
+                        <a href="#">Sydney</a>
+                        <a href="#">Tokyo</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <div class="custom-container">
+            <div class="footer-logo-description">
+                <div class="footer-logo">
+                    <a href="/"><img src="assets/images/header_logo.svg"></a>
+                </div>
+                <p>Rent By Owner has helped millions of travelers find the perfect place to stay. Book directly and
+                    compare the best deals across a global network of trusted travel sellers. We feature more than 10M
+                    properties located in 196 countries, and 180,000&#43; cities around the world.
+                </p>
+
+            </div>
+
+        </div>
+        <div class="footer-top">
+            <div class="footer-quicklinks">
+
+                <ul>
+
+                    <li class="quicklinks-li quicklinks-1">
+                        <h6>Quick Links</h6>
+                        <a href="#">All RBO Homes</a>
+                        <a href="#">Vacation Rentals</a>
+                        <a href="#">Cabins</a>
+                        <a href="#">Cottages</a>
+                        <a href="#">Ski Chalets</a>
+                    </li>
+                    <li class="quicklinks-li quicklinks-2">
+                        <h6>&nbsp;</h6>
+                        <a href="#">Unique Vacation Rentals</a>
+                        <a href="#">Villas</a>
+                        <a href="#"> Hotels with Suites</a>
+                        <a href="#">Resorts</a>
+                        <a href="#"> Timeshares</a>
+                    </li>
+                    <li class="quicklinks-li quicklinks-3">
+                        <h6>&nbsp;</h6>
+                        <a href="#">About Rent By Owner</a>
+                        <a href="#">Our Travel Journal</a>
+                        <a href="#">My Profile</a>
+                        <a href="#">FAQs</a>
+                        <a href="#">Virtual Property Manager</a>
+                        <a href="#">List Your Property</a>
+                        <a href="#">Resources For Owners</a>
+                    </li>
+
+                    <li class="quicklinks-li quicklinks-4">
+                        <h6>Newsletter AND Updates</h6>
+                        <div class="subscribe-input">
+                            <div class="center">
+                                <input type="text" placeholder="Subscribe For Updates" id="subscribe">
+                                <button type="button" name="submit-button" id="submit-subscribe">Submit</button>
+                            </div>
+
+                        </div>
+
+                        <ul>
+                            <li>
+                                <a href=""><img src="assets/images/icons/facebook.svg"></a>
+                                <a href=""><img src="assets/images/icons/icons8-twitter.svg"></a>
+                                <a href=""><img src="assets/images/icons/icons8-instagram.svg"></a>
+                            </li>
+                        </ul>
+
+
+                        <ul class="footer-privacy-term">
+                            <li>
+                                <a href="">Privacy Policy</a>
+                            </li>
+                            <li>
+                                |
+                            </li>
+                            <li>
+                                <a href="">Terms</a>
+                            </li>
+                            <li>
+                                |
+                            </li>
+                            <li>
+                                <a href="">Site Map</a>
+                            </li>
+                        </ul>
+
+
+                        <div class="copy-right-text">© 2023 <a href="/">Rent By Owner</a> <span>. All Rights
+                                Reserved.</span></div>
+                    </li>
+
+                    </li>
+
+                </ul>
+
+                <div class="footer-certified-logos">
+                    <div class="footer-certified-logos-1">
+                        <div class="select">
+                            <ul class="select-currency">
+                                <li><a href="">(BDT) </a><img src="assets/images/icons/caret-down.svg"
+                                        class="caret-img">
+                                    <ul>
+                                        <li><a href="">(AED)</a></li>
+                                        <li><a href="">(USD)</a></li>
+                                        <li><a href="">(EUR)</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="vrma-logo"><img src="assets/images/icons/vrma.webp"></div>
+                    </div>
+
+                    <div class="footer-certified-logos-2">
+                        <div>
+                            <img src="assets/images/icons/travelai_logo.svg" alt="" id="travelai-logo">
+                        </div>
+                        <div id="footer-bar">|</div>
+                        <div class="powered-text">
+                            Rent By Owner
+                            <br>
+                            Powered by TravelAi
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="/assets/js/myscript.js"></script>
+</body>
+
+</html>

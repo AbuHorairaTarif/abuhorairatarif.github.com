@@ -1,0 +1,30 @@
+.text-center {
+    text-align: center;
+}
+
+.button {
+    height: 65px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.color-green {
+    color: #00CD92;
+}
+
+.color-navy {
+    color: #013573;
+}
+
+.bg-color-green {
+    background-color:#00CD92;
+}
+
+.bg-color-navy {
+    background-color: #013573;
+}
+
+.text-white {
+    color: #ffffff;
+}
