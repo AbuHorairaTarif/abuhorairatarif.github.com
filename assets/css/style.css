@@ -358,7 +358,7 @@ a#skill-detail-btn:hover {
     display: none;
     position: absolute;
     right: -100%;
-    transition: .7s;
+    transition: .7s all;
 }
 
 .navbar-mb-view {
@@ -895,7 +895,7 @@ h4.location-area {
     }
 
     .navbar-mb-ul {
-        display: none;
+        display: flex;
         flex-direction: column;
         align-items: center;
         position: absolute;
@@ -906,6 +906,7 @@ h4.location-area {
         min-height: 100vh;
         padding-top: 120px;
         background-color: #0E203D;
+        transition: 0.7s all;
     }
 
     .navbar-mb-a {

@@ -17,7 +17,10 @@ hamburgerIcon.addEventListener("click", function(){
 })
 
 closeIcon.addEventListener("click", function(){
-    navMenuMb.style.display = "none";
+    navMenuMb.style.display = "flex";
     closeIcon.style.display = "none";
+    navMenuMb.style.transition = "0.7s all";
+    navMenuMb.style.right = "-100%";
+    
 
 })
