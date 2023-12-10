@@ -366,6 +366,17 @@ a#skill-detail-btn:hover {
     display: none;
 }
 
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.reveal.activate {
+    transform: translateY(0);
+    opacity: 1;
+}
 
 /* header section ended */
 
