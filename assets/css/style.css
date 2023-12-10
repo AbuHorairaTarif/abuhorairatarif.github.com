@@ -213,7 +213,7 @@ nav .brand-title {
 
 
 .navbar-right-li:hover>a {
-    color:#ffd900;
+    color: #ffd900;
 }
 
 .mega-menu {
@@ -791,6 +791,14 @@ h4.location-area {
     font-size: .75rem;
     color: #fff;
     font-style: italic;
+}
+
+[data-aos] {
+    visibility: visible;
+}
+
+[data-aos].animated {
+    visibility: visible;
 }
 
 /* #####################  Different Screen size  ##################### */
