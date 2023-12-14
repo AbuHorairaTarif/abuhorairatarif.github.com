@@ -1,5 +1,5 @@
 
-<p align="center"><img src="assets/images/bg/person.jpg" alt="Abu Horaira Tarif" width="150" height="150" style="border-radius:100%; 
+<p align="center"><img src="img/tarif.jpg" alt="Abu Horaira Tarif" width="150" height="150" style="border-radius:100%; 
 "></p>
 
 <h1 align= "center" style="color:#06283D;">𝓐𝓫𝓾 𝓗𝓸𝓻𝓪𝓲𝓻𝓪 𝓣𝓪𝓻𝓲𝓯</h1>
