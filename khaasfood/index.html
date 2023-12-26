@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khaasfood</title>
+    <meta name="description" content="Its an ecommerce site">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+
+<body>
+
+    <!-- mobile version navsection -->
+    <div class="min-[980px]:hidden m-3 flex items-center gap-3">
+        <i class="fa fa-bars  text-2xl cursor-pointer" aria-hidden="true" id="hamburger"></i>
+
+        <!-- category and menu item dropdown -->
+        <div class="hidden w-screen h-screen" id="category-menu-container">
+            <div class="flex justify-center items-center my-2 max-w-[100%] text-center uppercase">
+                <span id="category-btn"
+                    class="category-menu-style py-2 w-1/2 cursor-pointer font-medium">Categories</span>
+                <span id="menu-btn" class="w-1/2 py-2 cursor-pointer font-medium">Menu</span>
+                <i class="fa fa-close mx-3 cursor-pointer text-2xl hover:text-green-700" aria-hidden="true"
+                    id="close-menu"></i>
+            </div>
+            <div id="category-list" class="max-w-[100%] ">
+                <ul class="flex flex-col uppercase">
+                    <li class="hover:text-green-700 hover:bg-lime-100 border p-2"><a href=""
+                            class="flex justify-between items-center font-medium">Honey <i class="fa fa-chevron-right"
+                                aria-hidden="true"></i></a></li>
+                    <li class="hover:text-green-700 hover:bg-lime-100 border p-2"><a href=""
+                            class="flex justify-between items-center font-medium">Nuts & Dates <i
+                                class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+                    <li class="hover:text-green-700 hover:bg-lime-100 border p-2"><a href=""
+                            class="flex justify-between items-center font-medium">Spices <i class="fa fa-chevron-right"
+                                aria-hidden="true"></i></a></li>
+                    <li class="hover:text-green-700 hover:bg-lime-100 border p-2"><a href=""
+                            class="flex justify-between items-center font-medium">Oil <i class="fa fa-chevron-right"
+                                aria-hidden="true"></i></a></li>
+                    <li class="hover:text-green-700 hover:bg-lime-100 border p-2"><a href=""
+                            class="flex justify-between items-center font-medium">Rice,Pulse & Grains <i
+                                class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+                    <li class="hover:text-green-700 hover:bg-lime-100 border p-2"><a href=""
+                            class="flex justify-between items-center font-medium">Super Foods <i
+                                class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+                    <li class="hover:text-green-700 hover:bg-lime-100 border p-2"><a href=""
+                            class="flex justify-between items-center font-medium">Sweeteners & Dairy <i
+                                class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+                    <li class="hover:text-green-700 hover:bg-lime-100 border p-2"><a href=""
+                            class="flex justify-between items-center font-medium">Pickle & Chutney <i
+                                class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+                    <li class="hover:text-green-700 hover:bg-lime-100 border p-2"><a href=""
+                            class="flex justify-between items-center font-medium">Tea & Snacks <i
+                                class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+                    <li class="hover:text-green-700 hover:bg-lime-100 border p-2"><a href=""
+                            class="flex justify-between items-center font-medium">Fruits <i class="fa fa-chevron-right"
+                                aria-hidden="true"></i></a></li>
+                    <li class="hover:text-green-700 hover:bg-lime-100 border p-2"><a href=""
+                            class="flex justify-between items-center font-medium">Fish <i class="fa fa-chevron-right"
+                                aria-hidden="true"></i></a></li>
+                    <li class="hover:text-green-700 hover:bg-lime-100 border p-2"><a href=""
+                            class="flex justify-between items-center font-medium">Poultry & Meat <i
+                                class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+                </ul>
+
+            </div>
+            <div id="menu-list" class="hidden max-w-[100%] ">
+                <ul class="flex flex-col uppercase">
+                    <li class="hover:text-green-700 hover:bg-lime-100 border p-2"><a href=""
+                            class="flex justify-between items-center font-medium">Home <i class="fa fa-chevron-right"
+                                aria-hidden="true"></i> </a></li>
+                    <li class="hover:text-green-700 hover:bg-lime-100 border p-2"><a href=""
+                            class="flex justify-between items-center font-medium">Products <i
+                                class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+                    <li class="hover:text-green-700 hover:bg-lime-100 border p-2"><a href=""
+                            class="flex justify-between items-center font-medium">Blog <i class="fa fa-chevron-right"
+                                aria-hidden="true"></i></a></li>
+                    <li class="hover:text-green-700 hover:bg-lime-100 border p-2"><a href=""
+                            class="flex justify-between items-center font-medium">Outlets <i class="fa fa-chevron-right"
+                                aria-hidden="true"></i></a></li>
+                    <li class="hover:text-green-700 hover:bg-lime-100 border p-2"><a href=""
+                            class="flex justify-between items-center font-medium">Winter Special <i
+                                class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+                    <li class="hover:text-green-700 hover:bg-lime-100 border p-2"><a href=""
+                            class="flex justify-between items-center font-medium">Halal Investment <i
+                                class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- searchbox -->
+        <form action="" class="flex items-center relative w-screen" id="mb-search">
+            <input type="search" name="search" id="" class="p-2 border-2 border-[#83b735] outline-none w-full 
+                placeholder:text-[#83b735] placeholder:text-sm rounded " placeholder="Search for products">
+            <i class="fa fa-search text-2xl bg-[#83b735] text-white p-1 px-2 absolute right-0 cursor-pointer "
+                aria-hidden="true"></i>
+        </form>
+
+        <i class="fa fa-cart-plus text-2xl text-[#b79735] cursor-pointer" aria-hidden="true" id="cart-mb"></i>
+    </div>
+
+    <div class="min-[980px]:hidden">
+        <img src="assets/img/mobile_banner.webp" width="1024" height="512" alt="">
+    </div>
+
+    <!-- mobile version hero section end -->
+
+    <!-- screen greater than 980px -->
+    <header class="hidden min-[980px]:flex flex-col min-[1220px]:w-4/5 min-[1220px]:mx-auto">
+        <div class="w-full px-4 py-2 text-sm font-semibold bg-slate-50 flex flex-col 
+        min-[992px]:flex-row min-[1024px]:items-center  min-[1024px]:mx-auto">
+            <a href="/" class="flex-auto shrink-0">
+                <img src="assets/img/logo.webp" alt="logo of khaasfood" width="158" height="67">
+            </a>
+            <div class="mr-10">
+                <ul
+                    class="hidden min-[1024px]:flex gap-4 uppercase flex-col items-start flex-wrap min-[1024px]:flex-row ">
+                    <li class="hover:text-[#83b735] duration-500"><a href="" class="">Home</a></li>
+                    <li class="hover:text-[#83b735] duration-500"><a href="">Products</a></li>
+                    <li class="hover:text-[#83b735] duration-500"><a href="">Blog</a></li>
+                    <li class="hover:text-[#83b735] duration-500"><a href="">Outlets</a></li>
+                    <li class="hover:text-[#83b735] duration-500"><a href="">Winter Special</a></li>
+                    <li class="hover:text-[#83b735] duration-500"><a href="">Halal Investment</a></li>
+                </ul>
+            </div>
+
+
+            <ul class="hidden min-[1200px]:flex gap-4 text-base">
+                <li class="bg-[#1877F2] w-5 text-center hover:bg-[#1852f2fc]"><a href=""><i
+                            class="fa fa-facebook text-white" aria-hidden="true"></i></a></li>
+                <li class="bg-[#1DA1F2] w-5 text-center hover:bg-[#1daff3dd]"><a href=""><i
+                            class="fa fa-twitter text-white" aria-hidden="true"></i></a></li>
+                <li class="bg-[#0077b5] w-5 text-center hover:bg-[#0064b5dd]"><a href=""><i
+                            class="fa fa-linkedin text-white" aria-hidden="true"></i></a></li>
+                <li class="bg-[#FF0000] w-5 text-center hover:bg-[#ff0000c2]"><a href=""><i
+                            class="fa fa-youtube text-white" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="flex items-center justify-between gap-4 w-full px-2 m-auto">
+            <div class="relative">
+                <a href=""
+                    class="w-[300px] bg-[#83b735] py-2 text-white font-semibold flex justify-around items-center"><i
+                        class="fa fa-th" aria-hidden="true"></i> Browse Category <i class="fa fa-arrow-down"
+                        aria-hidden="true"></i></a>
+                <ul class="flex flex-col absolute top-[50px] font-medium min-w-[300px] bg-[#a3fe3736] text-slate-900">
+                    <li class=" "><a href=""
+                            class="p-1 border-b flex justify-between items-center hover:bg-[#ff5] duration-500">Honey <i
+                                class="fa fa-chevron-right text-[#aaa]" aria-hidden="true"></i></a></li>
+                    <li class=" "><a href=""
+                            class="p-1 border-b flex justify-between items-center hover:bg-[#ff5] duration-500">Nuts
+                            & Dates <i class="fa fa-chevron-right text-[#aaa]" aria-hidden="true"></i></a></li>
+                    <li class=" "><a href=""
+                            class="p-1 border-b flex justify-between items-center hover:bg-[#ff5] duration-500">Spices
+                            <i class="fa fa-chevron-right text-[#aaa]" aria-hidden="true"></i></a></li>
+                    <li class=" "><a href=""
+                            class="p-1 border-b flex justify-between items-center hover:bg-[#ff5] duration-500">Oil
+                            <i class="fa fa-chevron-right text-[#aaa]" aria-hidden="true"></i></a></li>
+                    <li class=" "><a href=""
+                            class="p-1 border-b flex justify-between items-center hover:bg-[#ff5] duration-500">Rice,
+                            Pulse & Grains
+                            <i class="fa fa-chevron-right text-[#aaa]" aria-hidden="true"></i></a></li>
+                    <li class=" "><a href=""
+                            class="p-1 border-b flex justify-between items-center hover:bg-[#ff5] duration-500">Super
+                            Foods <i class="fa fa-chevron-right text-[#aaa]" aria-hidden="true"></i></a></li>
+                    <li class=" "><a href=""
+                            class="p-1 border-b flex justify-between items-center hover:bg-[#ff5] duration-500">Sweeteners
+                            & Dairy <i class="fa fa-chevron-right text-[#aaa]" aria-hidden="true"></i></a></li>
+                    <li class=" "><a href=""
+                            class="p-1 border-b flex justify-between items-center hover:bg-[#ff5] duration-500">Pickle &
+                            Chutney <i class="fa fa-chevron-right text-[#aaa]" aria-hidden="true"></i></a></li>
+                    <li class=" "><a href=""
+                            class="p-1 border-b flex justify-between items-center hover:bg-[#ff5] duration-500">Tea
+                            & Snacks <i class="fa fa-chevron-right text-[#aaa]" aria-hidden="true"></i></a></li>
+                    <li class=" "><a href=""
+                            class="p-1 border-b flex justify-between items-center hover:bg-[#ff5] duration-500">Fruits
+                            <i class="fa fa-chevron-right text-[#aaa]" aria-hidden="true"></i></a></li>
+                    <li class=" "><a href=""
+                            class="p-1 border-b flex justify-between items-center hover:bg-[#ff5] duration-500">Fish
+                            <i class="fa fa-chevron-right text-[#aaa]" aria-hidden="true"></i></a></li>
+                    <li class=" "><a href=""
+                            class="p-1 border-b flex justify-between items-center hover:bg-[#ff5] duration-500">Poultry
+                            & Meat <i class="fa fa-chevron-right text-[#aaa]" aria-hidden="true"></i></a></li>
+                </ul>
+
+
+            </div>
+            <a href="" class="bg-[rgb(233,232,232)] p-2 px-4 w-1/12 text-center hover:bg-[#c99e47ef] hover:text-[#fff]">
+                Offer</a>
+            <form action="" class="w-1/3 flex flex-wrap">
+                <div class="border-2 rounded border-[#83b735] flex items-center w-96 relative">
+                    <label for="searchbox"></label>
+                    <input type="search" id="searchbox" class="p-2 focus:outline-none w-5/6 placeholder:text-[#83b735]"
+                        placeholder="Search For Products">
+                    <i class="fa fa-search px-3 py-3 cursor-pointer absolute right-0 text-white bg-[#83b735]"
+                        aria-hidden="true"></i>
+
+                </div>
+            </form>
+
+            <a href=""
+                class="uppercase text-sm font-medium px-4 py-2 bg-[#9c37c4] text-white rounded-2xl  hover:bg-[#cc4dfe] duration-500">Login/Register</a>
+            <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            <a href="" class="text-sm font-semibold shrink"><span class="text-sm">&#2547;</span> 0</a>
+        </div>
+
+        <div class="flex justify-start mt-2 ">
+            <div class="min-w-[308px] h-[394px] mr-2"></div>
+            <div class="w-full relative ">
+                <img src="assets/img/banner2.jpg" class="w-full h-[394px]" width="1280px" height="768px" alt="">
+                
+            </div>
+            </div>
+            
+
+    </header>
+
+
+    <div class="my-5 w-4/5 m-auto space-y-4 p-2 ">
+        <h2 class="text-center text-2xl text-[#83b735] mb-4 font-semibold">Winter Special</h2>
+        <div class="card-container flex items-center justify-center gap-5 flex-wrap">
+            <div class="card h-[25rem] flex shadow-md ">
+                <img src="assets/img/winter-products-2-1-240x355.webp" class="" width="260" height="360" alt="">
+            </div>
+            <div class="flex flex-col items-center justify-center gap-2 border shadow-md h-[25rem]">
+                <img src="assets/img/Deshi-Duck-copy.webp" width="260" height="360" alt="" class="">
+                <h3 class="font-medium">Deshi Duck</h3>
+                <p class="flex gap-1">
+                    <span class="bg-lime-200 rounded-xl px-1 text-sm font-medium">Tk 300</span>
+                    <span class="bg-[#aaf2fce6] rounded-xl px-1 text-sm font-medium">1.4 Kg</span>
+                </p>
+                <p class="text-xs text-green-700">Available</p>
+                
+                <a href="" class="px-2 py-1 uppercase rounded-2xl text-xs bg-[#83b735] text-white font-medium hover:bg-[#709738] duration-500 ">Add to Cart</a>
+            </div>
+
+            <div class="flex flex-col items-center justify-center gap-2 border shadow-md h-[25rem]">
+                <img src="assets/img/brown-rice.webp" width="260" height="360" alt="" class="">
+                <h3 class="font-medium">Brown Rice</h3>
+                <p class="flex gap-1">
+                    <span class="bg-lime-200 rounded-xl px-1 text-sm font-medium">Tk 375</span>
+                    <span class="bg-[#aaf2fce6] rounded-xl px-1 text-sm font-medium">5 Kg</span>
+                </p>
+                <p class="text-xs text-green-700">Available</p>
+                
+                <a href="" class="px-2 py-1 uppercase rounded-2xl text-xs bg-[#83b735] text-white font-medium hover:bg-[#709738] duration-500 ">Add to Cart</a>
+            </div>
+
+            <div class="flex flex-col items-center justify-center gap-2 border shadow-md h-[25rem]">
+                <img src="assets/img/mustard-oil-1.webp" width="260" height="360" alt="" class="">
+                <h3 class="font-medium">Mustard Oil</h3>
+                <p class="flex gap-1">
+                    <span class="bg-lime-200 rounded-xl px-1 text-sm font-medium">Tk 165 - Tk 1350</span>
+                </p>
+                <p class="text-xs text-red-800 line-through font-medium">Out of stock</p>
+                
+                <a href="" class="px-2 py-1 uppercase rounded-2xl text-xs bg-[#83b735] text-white font-medium hover:bg-[#709738] duration-500 ">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-5 w-4/5 m-auto space-y-4 p-2 ">
+        <h2 class="text-center text-2xl text-[#83b735] mb-4 font-semibold">Regular Needs</h2>
+        <div class="card-container flex items-center justify-center gap-5 flex-wrap">
+            <div class="card h-[25rem] flex shadow-md ">
+                <img src="assets/img/daily-needs-240x355.webp" class="" width="260" height="360" alt="">
+            </div>
+            <div class="flex flex-col items-center justify-center gap-2 border shadow-md h-[25rem]">
+                <img src="assets/img/brown-atta.webp" width="260" height="360" alt="" class="">
+                <h3 class="font-medium">Brown Atta</h3>
+                <p class="flex gap-1">
+                    <span class="bg-lime-200 rounded-xl px-1 text-sm font-medium">Tk 85</span>
+                    <span class="bg-[#aaf2fce6] rounded-xl px-1 text-sm font-medium">1 Kg</span>
+                </p>
+                <p class="text-xs text-green-700">Available</p>
+                
+                <a href="" class="px-2 py-1 uppercase rounded-2xl text-xs bg-[#83b735] text-white font-medium hover:bg-[#709738] duration-500 ">Add to Cart</a>
+            </div>
+
+            <div class="flex flex-col items-center justify-center gap-2 border shadow-md h-[25rem]">
+                <img src="assets/img/brown-rice.webp" width="260" height="360" alt="" class="">
+                <h3 class="font-medium">Brown Rice</h3>
+                <p class="flex gap-1">
+                    <span class="bg-lime-200 rounded-xl px-1 text-sm font-medium">Tk 375</span>
+                    <span class="bg-[#aaf2fce6] rounded-xl px-1 text-sm font-medium">5 Kg</span>
+                </p>
+                <p class="text-xs text-green-700">Available</p>
+                
+                <a href="" class="px-2 py-1 uppercase rounded-2xl text-xs bg-[#83b735] text-white font-medium hover:bg-[#709738] duration-500 ">Add to Cart</a>
+            </div>
+
+            <div class="flex flex-col items-center justify-center gap-2 border shadow-md h-[25rem]">
+                <img src="assets/img/brown-sugar.webp" width="260" height="360" alt="" class="">
+                <h3 class="font-medium">Brown Sugar</h3>
+                <p class="flex gap-1">
+                    <span class="bg-lime-200 rounded-xl px-1 text-sm font-medium">Tk 165</span>
+                    <span class="bg-[#aaf2fce6] rounded-xl px-1 text-sm font-medium">1 Kg</span>
+                </p>
+                <p class="text-xs text-red-800 line-through font-medium">Out of stock</p>
+                
+                <a href="" class="px-2 py-1 uppercase rounded-2xl text-xs bg-[#83b735] text-white font-medium hover:bg-[#709738] duration-500 ">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-16"></div>
+
+    <div class="min-[980px]:hidden bottom-0 w-full fixed">
+        <ul class="flex gap-1 justify-around text-center bg-[#83b735] mt-30 ">
+            <li><a href=""
+                    class="flex flex-col text-xs font-bold  text-white p-1 hover:bg-white hover:text-[#83b735] duration-700">
+                    <i class="fa fa-home text-xl" aria-hidden="true"></i>Home</a></li>
+            <li><a href=""
+                    class="flex flex-col text-xs font-bold text-white p-1 hover:bg-white hover:text-[#83b735] duration-700 ">
+                    <i class="fa fa-shopping-bag text-xl" aria-hidden="true"></i>Offers</a></li>
+            <li><a href=""
+                    class="flex flex-col text-xs font-bold text-white p-1 hover:bg-white hover:text-[#83b735] duration-700 ">
+                    <i class="fa fa-tags text-xl" aria-hidden="true"></i>Category</a></li>
+            <li><a href=""
+                    class="flex flex-col text-xs font-bold text-white p-1 hover:bg-white hover:text-[#83b735] duration-700 ">
+                    <i class="fa fa-user text-xl" aria-hidden="true"></i>My Account</a></li>
+        </ul>
+    </div>
+
+    <script src="assets/js/myscript.js"></script>
+</body>
+
+</html>

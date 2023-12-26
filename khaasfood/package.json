@@ -1,0 +1,14 @@
+{
+  "name": "khaasfood",
+  "version": "1.0.0",
+  "description": "This is khaasfood site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abu Horaira Tarif",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}
