@@ -4,7 +4,7 @@
   "description": "This is khaasfood site",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css -w"
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
   },
   "author": "Abu Horaira Tarif",
   "license": "ISC",

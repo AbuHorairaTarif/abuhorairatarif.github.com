@@ -4,7 +4,7 @@
 
 @layer components {
     .btn {
-        @apply px-2 py-1 uppercase rounded-2xl text-xs  font-medium ;
+        @apply px-2 py-2 uppercase rounded-2xl text-xs  font-medium ;
     }
 
     .btn-success {
@@ -13,14 +13,17 @@
 }
 
 @layer base {
-    h5{
+    /* h5{
         @apply font-medium;
+    } */
+
+    body {
+        font-family: 'Poppins', sans-serif;
     }
 }
 
 @layer utilities {
-    .text-danger{
-        color:red;
-    }
+  
 
 }
+
