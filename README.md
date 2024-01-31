@@ -10,7 +10,7 @@
 
 <p>
     During my academic life at CUET, I have gathered several experiences in the field of computer science. 
-    I have worked in different branch of Computer Science & Engineering including Software Developement,
+    I have worked in different branch of Computer Science & Engineering including Software Development,
     Network Administrator, Web Development, System Design, Android App Development, Game Development etc. 
     I am currently enrolled at BUET in the Department of CSE and conducting research on various branch of IT sectors.
 </p>
