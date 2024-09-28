@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /private/
+Disallow: /secret/
+Allow: /
+
+# Sitemap location for crawlers
+sitemap: https://abuhorairatarif.github.io/sitemap.xml
